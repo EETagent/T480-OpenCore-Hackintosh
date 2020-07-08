@@ -10,7 +10,7 @@
 		</data>
 		<key>Resources/Assets.car</key>
 		<data>
-		nFC1hb0YSDt3HVmHlW95nSWm+OA=
+		TQwPq4XYk4Q2Z8k9GoMiC20qwyk=
 		</data>
 		<key>Resources/Base.lproj/MainMenu.nib</key>
 		<data>
@@ -24,11 +24,47 @@
 		<data>
 		Zn4NS1U1fG5829oAbJwhxd7Gi3c=
 		</data>
+		<key>Resources/es.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			y8vFO3e9PmzQniDhd+c7HwN0pjQ=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>Resources/it.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			uTQ4tN+rgAYL/zYmHvIHW16Vv+Y=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>Resources/pt-BR.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			B8QSX+yZg76NR5PEytpAr5dsh1M=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>Resources/tr.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			tb6jqDxzhRrOHv+kWcLLJIUc6X8=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>Resources/zh-Hans.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ux03a/DQN0YAf9IRhjVs70fbZNk=
+			IXl/zG9G7huG/iF2J2oXTmNXgEk=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -45,14 +81,14 @@
 	</dict>
 	<key>files2</key>
 	<dict>
-		<key>Frameworks/Pods_HeliPort.framework</key>
+		<key>Frameworks/KeychainAccess.framework</key>
 		<dict>
 			<key>cdhash</key>
 			<data>
-			CvtiHAqpiHSSijylQ+lKZbzAhHU=
+			GQdzr/pPeLHPNaqZuWSTy601etg=
 			</data>
 			<key>requirement</key>
-			<string>cdhash H"4a112568d557bb8d88502300dcaa435339ea7116" or cdhash H"0afb621c0aa98874928a3ca543e94a65bcc08475"</string>
+			<string>cdhash H"e27c1165f7268f59c47357ceefab73d338443388" or cdhash H"190773affa4f78b1cf35aa99b96493cbad357ad8"</string>
 		</dict>
 		<key>Frameworks/Sparkle.framework</key>
 		<dict>
@@ -135,6 +171,24 @@
 			<key>requirement</key>
 			<string>cdhash H"bd96f82f185bd671d189123976b51076190ccd28" or cdhash H"e1e1cca0d89b4c27a07621fbb416966985de12b5"</string>
 		</dict>
+		<key>Frameworks/libswiftXPC.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			6MPIdTDBXAtAo9yqCoBoyxL+U8s=
+			</data>
+			<key>requirement</key>
+			<string>cdhash H"49fa9c8d039af4afe6f5c5e79d997dfff086bc44" or cdhash H"e8c3c87530c15c0b40a3dcaa0a8068cb12fe53cb"</string>
+		</dict>
+		<key>Frameworks/libswiftos.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			/Nk9FyHvf7whO+02U8QE2ADsrjg=
+			</data>
+			<key>requirement</key>
+			<string>cdhash H"a18612d2eccee6fe22332c3b57ae07e6635c3ef4" or cdhash H"fcd93d1721ef7fbc213bed3653c404d800ecae38"</string>
+		</dict>
 		<key>Resources/AppIcon.icns</key>
 		<dict>
 			<key>hash2</key>
@@ -146,7 +200,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			A0UN68eRj4u4sYrb5IuDUcKe3mdI132snJ514ur2Irs=
+			nFDSDDJG6bkmjxNBLzTcIHjm/RbQlvXeUbHdP4IRUZE=
 			</data>
 		</dict>
 		<key>Resources/Base.lproj/MainMenu.nib</key>
@@ -170,11 +224,47 @@
 			xyG66uq0qwyDlccwOyeOTP/xk5S+CvmTVtSYwcE4KCg=
 			</data>
 		</dict>
+		<key>Resources/es.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			/miXHGGFXAf9KSk5e4oOw3mMOY2aFMa5TgwmM/ZBc5g=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>Resources/it.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			spz6K/ruxs/WCuJk06D7KIh6k0fqq1FcdHv/1tesASU=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>Resources/pt-BR.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			5kgvsoYh4AsI0nCYeSTSi2IAeJtk00eQvmVC+ZDliM8=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>Resources/tr.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			OadSkr1KZ/p62HzqvlALK67LS+X2m3jW9fJpepv66as=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>Resources/zh-Hans.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			AYto0hp+ojDESAfSjYfuiWORfuvdi6tITXOLagrUtno=
+			flN/tN0JBbifCGmwHyJJjiZ+R7sJwK1UPiEi+1LvxsM=
 			</data>
 			<key>optional</key>
 			<true/>

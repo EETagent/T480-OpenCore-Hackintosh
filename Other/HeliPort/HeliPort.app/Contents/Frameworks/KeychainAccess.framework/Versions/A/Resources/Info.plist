@@ -7,17 +7,17 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
-	<string>Pods_HeliPort</string>
+	<string>KeychainAccess</string>
 	<key>CFBundleIdentifier</key>
-	<string>org.cocoapods.Pods-HeliPort</string>
+	<string>org.cocoapods.KeychainAccess</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>Pods_HeliPort</string>
+	<string>KeychainAccess</string>
 	<key>CFBundlePackageType</key>
 	<string>FMWK</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0.0</string>
+	<string>4.2.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleSupportedPlatforms</key>
@@ -29,18 +29,18 @@
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
-	<string>11E608c</string>
+	<string>11A1027</string>
 	<key>DTPlatformVersion</key>
 	<string>GM</string>
 	<key>DTSDKBuild</key>
-	<string>19E258</string>
+	<string>19A547</string>
 	<key>DTSDKName</key>
 	<string>macosx10.15</string>
 	<key>DTXcode</key>
-	<string>1150</string>
+	<string>1110</string>
 	<key>DTXcodeBuild</key>
-	<string>11E608c</string>
+	<string>11A1027</string>
 	<key>LSMinimumSystemVersion</key>
-	<string>10.12</string>
+	<string>10.9</string>
 </dict>
 </plist>

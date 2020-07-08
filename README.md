@@ -2,6 +2,12 @@
 
 **Status: Work In Progress**
 
+[![release](https://img.shields.io/badge/Download-latest-brightgreen.svg)](https://github.com/EETagent/T480-OpenCore-Hackintosh/releases/latest)
+[![OpenCore](https://img.shields.io/badge/OpenCore-0.6.0-blue.svg)](https://github.com/acidanthera/OpenCorePkg)
+[![ThinkPad](https://img.shields.io/badge/ThinkPad-T480-blue.svg)]()
+[![macOS-Previous](https://img.shields.io/badge/macOS-10.14.6-brightgreen.svg)](https://github.com/EETagent/T480-OpenCore-Hackintosh/issues/11)
+[![macOS-Stable](https://img.shields.io/badge/macOS-10.15.6-brightgreen.svg)](https://www.apple.com/macos/catalina/)
+[![macOS-Unstable](https://img.shields.io/badge/macOS-11-yellow.svg)](https://www.apple.com/macos/big-sur-preview/)
 ### General knowledge & credits
 
 - To install macOS follow the guides provided by [Dortania](https://dortania.github.io/getting-started/)
@@ -20,95 +26,96 @@
 | Memory    | 8GB DDR4 2400                        |                                                                                                                                          |
 | Battery   | Dual battery                         |                                                                                                                                          |
 | Camera    | 720p Camera                          |                                                                                                                                          |
-| Wifi & BT | Intel Wireless-AC 8265               | Both works. Wifi requres to manually place passwords and SSIDs in the Kext plist file (Basic control with HeliPort app in Other folder)  |
+| Wifi & BT | Intel Wireless-AC 8265               | Both works. Place Wi-Fi SSIDs and passwords either in the kext plist file or use amazing HeliPort application.                                   |
 | KBD       | Keyboard                             | [ThinkPad Assistant](https://github.com/MSzturc/ThinkpadAssistant) for media keys like microphone switch, etc. PrtSc is mapped as F13.   |
 
 ## Main software:
 
-| Component      | Version          |
-| -------------- | ---------------- |
-| MacOS Catalina | 10.15.5 (19F101) |
-| OpenCore       | v0.5.9           |
+| Component      | Version           |
+| -------------- | ----------------- |
+| MacOS Catalina | 10.15.6 (19G60d)  |
+| OpenCore       | v0.6.0 Beta       |
 
 ## Kernel extensions
 
 | Kext                   | Version        |
 |:---------------------- | -------------- |
-| AppleALC               | 1.5.0          |
-| CPUFriend              | 1.2.0          |
+| AppleALC               | 1.5.1          |
+| CPUFriend              | 1.2.1          |
 | CPUFriendDataProvider  | i5-8250U       |
-| HibernationFixup       | 1.3.3          |
+| HibernationFixup       | 1.3.4          |
 | HoRNDIS                | Disabled, 9.2  |
-| IntelBluetoothFirmware | 1.0.3          |
-| IntelBluetoothInjector | 1.0.3          |
+| IntelBluetoothFirmware | 1.1.1          |
+| IntelBluetoothInjector | 1.1.1          |
 | IntelMausiEthernet     | 2.5.1.d1       |
 | Itlwm                  | 1.0.1          |
-| Lilu                   | 1.4.5          |
+| Lilu                   | 1.4.6          |
 | NoTouchID              | 1.0.3          |
 | RTCMemoryFixup         | 1.0.6          |
 | NVMeFix                | 1.0.3          |
-| USBInjectAll           | 0.7.1          |
-| VirtualSMC             | 1.1.4          |
+| VirtualSMC             | 1.1.5          |
 | VoltageShift           | Disabled, 1.22 |
 | VoodooPS2Controller    | 2.1.5          |
 | VoodooRMI              | 0.4.0          |
 | VoodooSMBus            | 2.1.0          |
-| WhateverGreen          | 1.4.0          |
+| WhateverGreen          | 1.4.1          |
 
 ## UEFI Drivers
 
 | Driver          | Version           |
 |:---------------:| ----------------- |
-| AudioDxe.efi    | OpenCorePkg 0.5.9 |
+| AudioDxe.efi    | OpenCorePkg 0.6.0 |
 | HfsPlus.efi     | OcBinaryData      |
-| OpenCanopy.efi  | OpenCorePkg 0.5.9 |
-| OpenRuntime.efi | OpenCorePkg 0.5.9 |
+| OpenCanopy.efi  | OpenCorePkg 0.6.0 |
+| OpenRuntime.efi | OpenCorePkg 0.6.0 |
 
 ## What's working
 
-- [x] Boot chime `Works. Sometimes, chime plays for like 0.2 seconds and then stops. Don't know why.`
-
-- [x] Boot menu
-
-- [x] Internal camera
-
-- [x] Intel I219V Ethernet port
+- [x] Battery percentage
 
 - [x] Bluetooth - Intel Wireless-AC 8265 (0x0A2B) 
 
-- [x] Wifi - Intel Wireless-AC 8265 `Wifi requires to manually place passwords and SSIDs in the Kext plist file. (Basic control with HeliPort app in Other folder)`
+- [x] Boot chime
 
-- [x] iMessage, FaceTime, App Store, iTunes Store. **Generate your own SMBIOS**
+- [x] Boot menu
 
-- [x] Realtek® ALC3287 ("ALC257") Audio
+- [x] CPU power management / performance `Now on par with Windows without XTU undervolt.`
 
-- [x] Microphone `With keyboard switch using ThinkPad Assistant.`
+- [x] FireVault 2 
 
-- [x] Battery percentage
-
-- [x] TrackPoint  `Works perfectly. Just like on Windows or Linux. Lower cursor speed or use previous release.`
-
-- [x] TouchPad `1-5 fingers swipe works. Emulate force touch longer and more voluminous touch.`
-
-- [x] Keyboard `Volume and brightness hotkeys. Another media keys with ThinkPad Assistant.`
+- [x] GPU UHD 620 hardware acceleration / performance 
 
 - [x] HDMI `Closed and opened lid. With audio.`
 
-- [x] UHD 620 hardware acceleration `AVC/HEVC encode and decode works.`
+- [x] iMessage, FaceTime, App Store, iTunes Store. **Generate your own SMBIOS**
 
-- [x] SD Card Reader `Fortunately, USB connected.`
+- [x] Intel I219V Ethernet port
+
+- [x] Keyboard `Volume and brightness hotkeys. Another media keys with ThinkPad Assistant.`
+
+- [x] Microphone `With keyboard switch using ThinkPad Assistant.`
+
+- [x] Realtek® ALC3287 ("ALC257") Audio
+
+- [x] SD card reader `Fortunately, USB connected.`
 
 - [x] Sidecar wired `Works with 15,2 SMBIOS. I was unable to get it working wit 14,1 SMBIOS, which some T480 configs uses.`
 
-- [x] USB Ports `USB Map is different for devices with Win Hello camera.`
+- [x] Sidecar wireless `If you want to use this feature, buy a compatible Broadcom card!`
 
-- [x] Perfomance `Now on par with Windows without XTU undervolt.`
+- [x] TouchPad `1-5 fingers swipe works. Emulate force touch using longer and more voluminous touch.`
+
+- [x] TrackPoint  `Works perfectly. Just like on Windows or Linux.`
+
+- [x] USB Ports `USB Map is different for devices with Windows Hello camera.`
+
+- [x] Web camera
+
+- [x] Wifi - Intel Wireless-AC 8265 `Wifi requires to manually place passwords and SSIDs in the Kext plist file. (Basic control with HeliPort app in Other folder)`
 
 - [x] Sleep/Wake `Does not work when booting over USB.`
 
 ## What's not working ⚠️
-
-- [ ] Sidecar wireless `If you want to use this feature, buy a Broadcom card`
 
 - [ ] Fingerprint reader `Drivers aren't even on Linux. The chances of creating a driver for macOS are minimal.`
 
@@ -116,15 +123,12 @@
 
 ## Not tested
 
-- [ ] FireVault 2 
-
-- [ ] Power Management `Needs more testing. Works.`
-
 - [ ] Thunderbolt  `No device to test.`
+
+- [ ] Upper (charging) USB Type C port
 
 - [ ] USB Type C Video output `No device to test.`
 
-- [ ] Upper (charging) USB Type C port
 
 ## Bios settings
 
@@ -162,7 +166,7 @@ Generate CPUFriendDataProvider for your machine [here](https://github.com/corpne
 
 ### VoltageShift undervolt
 
-It is possible to use VoltageShift from EFI folder instead of disabling SIP. You need to use specific version provided in Other folder.
+It is possible to use VoltageShift from EFI folder instead of disabling SIP. You need to use specific version provided in the Other folder.
 
 **If you want to use this feature, enable it in config.plist**
 

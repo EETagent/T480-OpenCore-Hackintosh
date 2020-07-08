@@ -7,7 +7,6 @@
 - The guys from [Acidanthera](https://github.com/acidanthera) that make this possible
   
    
-
 - [1Revenger1](https://github.com/1Revenger1) and [leo-labs](https://github.com/leo-labs) for [VoodooRMI](https://github.com/VoodooSMBus/VoodooRMI) and [VoodooSMBus](https://github.com/VoodooSMBus/VoodooSMBus)
 
 - [al3xtjames](https://github.com/al3xtjames) for [NoTouchID](https://github.com/al3xtjames/NoTouchID)
@@ -22,16 +21,17 @@
 
 - [MSzturc](https://github.com/MSzturc) for [ThinkPad Assistant](https://github.com/MSzturc/ThinkpadAssistant)
 
+- [OpenIntelWireless](https://github.com/OpenIntelWireless/IntelBluetoothFirmware/releases) for [IntelBluetoothFirmware](https://github.com/OpenIntelWireless/IntelBluetoothFirmware), [itlwm](https://github.com/OpenIntelWireless/itlwm) and [HeliPort](hhttps://github.com/OpenIntelWireless/HeliPort)
+
 - [sicreative](https://github.com/sicreative) for [VoltageShift](https://github.com/sicreative/VoltageShift)
 
-- [zxystd](https://github.com/zxystd) for [IntelBluetoothFirmware](https://github.com/zxystd/IntelBluetoothFirmware) and [itlwm](https://github.com/zxystd/itlwm)
-  
+- And every other contributor
    
 
-- People at [r/hackintosh](https://www.reddit.com/r/hackintosh/) for their advices
+- To all people who help with testing - [afreuden](https://github.com/afreuden),[danny7g](https://github.com/danny7g), [khokho](https://github.com/khokho), [tienhuynh5312](https://github.com/tienhuynh5312), [villeheikkila](https://github.com/villeheikkila), [zombillano](https://github.com/zombillano)
 
 - Lots of SSDT patches from [OC-little](https://translate.google.it/translate?sl=zh-CN&tl=en&u=https%3A%2F%2Fgithub.com%2Fdaliansky%2FOC-little)
 
-- To all people who help with testing - [danny7g](https://github.com/danny7g), [khokho](https://github.com/khokho)
+- People at [r/hackintosh](https://www.reddit.com/r/hackintosh/) for their advices
 
 - [simprecicchiani](https://github.com/simprecicchiani) and [xma](https://github.com/xma) for inspirational ThinkPad configurations
