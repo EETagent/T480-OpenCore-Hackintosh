@@ -1,5 +1,5 @@
 // Adding various virtual devices for macOS compatibility
-// ALS0, PWRB, MCHC, DMAC
+// ALS0, PWRB, MCHC, SMBUS, DMAC
 
 DefinitionBlock ("", "SSDT", 2, "T480", "VDEV", 0)
 {
@@ -51,15 +51,23 @@ DefinitionBlock ("", "SSDT", 2, "T480", "VDEV", 0)
 
     }   // END of Scope \_SB
 
+
+
+    /*
+     * SMBus compatibility table.
+     *
+     * Needed to load com.apple.driver.AppleSMBusController
+     */
+
     External (\_SB.PCI0, DeviceObj)
 
     Scope (\_SB.PCI0)
     {
         Device (MCHC)
         {
-            Name (_ADR, Zero)  // _ADR: Address
+            Name (_ADR, Zero) 
 
-            Method (_STA, 0, NotSerialized)  // _STA: Status
+            Method (_STA, 0, NotSerialized)  
             {
                 If (_OSI ("Darwin"))
                 {
@@ -72,6 +80,54 @@ DefinitionBlock ("", "SSDT", 2, "T480", "VDEV", 0)
             }
         }
     }
+    
+    External (_SB_.PCI0.SBUS, DeviceObj)
+
+    Scope (_SB.PCI0.SBUS)
+    {
+        Device (BUS0)
+        {
+            Name (_CID, "smbus")  
+            Name (_ADR, Zero)  
+
+            Device (DVL0)
+            {
+                Name (_ADR, 0x57)  
+                Name (_CID, "diagsvault")  
+
+                Method (_DSM, 4, NotSerialized) 
+                {
+                    If (!Arg2)
+                    {
+                        Return (Buffer (One)
+                        {
+                            0x57                                             
+                        })
+                    }
+
+                    Return (Package (0x02)
+                    {
+                        "address", 
+                        0x57
+                    })
+                }
+            }
+
+            Method (_STA, 0, NotSerialized)
+            {
+                If (_OSI ("Darwin"))
+                {
+                    Return (0x0F)
+                }
+
+                Return (Zero)
+            }
+        }
+    }
+    
+     /*
+     * Fix up memory controller
+     */
     
     External (_SB_.PCI0.LPCB, DeviceObj)
 

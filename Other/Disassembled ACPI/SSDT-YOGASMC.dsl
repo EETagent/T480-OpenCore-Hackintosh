@@ -1,13 +1,7 @@
-/*
- * Sample SSDT for ThinkSMC
- */
-DefinitionBlock ("", "SSDT", 2, "T480", "ThinkSMC", 0x00000000)
+DefinitionBlock ("", "SSDT", 2, "T480", "YOGASMC", 0x00001000)
 {
     External (_SB_.PCI0.LPCB.EC.HKEY, DeviceObj)
-
-    /*
-     * Optional: Route to customized LED pattern or origin _SI._SST if differ from built in pattern.
-     */
+    External (_SB_.PCI0.LPCB.EC, DeviceObj)
     External (_SI_._SST, MethodObj)    // 1 Arguments
 
     Scope (\_SB.PCI0.LPCB.EC.HKEY)
@@ -20,14 +14,11 @@ DefinitionBlock ("", "SSDT", 2, "T480", "ThinkSMC", 0x00000000)
     }
 
     /*
-     * Optional: Sensor access
-     * 
-     * Double check name of FieldUnit for collision
-     * Registers return 0x00 for non-implemented, 
-     * and return 0x80 when not available.
-     */
-    External (_SB.PCI0.LPCB.EC, DeviceObj)    // EC path
-
+    * Sample SSDT for ThinkSMC sensor access
+    * Double check name of FieldUnit for collision
+    * Registers return 0x00 for non-implemented, 
+    * and return 0x80 when not available.
+    */
     Scope (_SB.PCI0.LPCB.EC)
     {
         OperationRegion (ESEN, EmbeddedControl, Zero, 0x0100)
@@ -57,4 +48,3 @@ DefinitionBlock ("", "SSDT", 2, "T480", "ThinkSMC", 0x00000000)
         }
     }
 }
-

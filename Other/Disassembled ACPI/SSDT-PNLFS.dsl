@@ -1,5 +1,5 @@
 // Adding PNLF device for AppleBacklightSmoother.kext
-DefinitionBlock("", "SSDT", 2, "T480", "_PNLFS", 0x00001000)
+DefinitionBlock("", "SSDT", 2, "T480", "PNLFS", 0x00001000)
 {
     External(_SB.PCI0.GFX0, DeviceObj)
 

@@ -34,7 +34,7 @@
 
 - To all people who help with testing and improving this repo - [afreuden](https://github.com/afreuden), [benbender](https://github.com/benbender), [danny7g](https://github.com/danny7g), [khokho](https://github.com/khokho), [knee41](https://github.com/knee41), [swatchie-1](https://github.com/swatchie-1) , [tienhuynh5312](https://github.com/tienhuynh5312), [UA3](https://github.com/UA3), [villeheikkila](https://github.com/villeheikkila), [zombillano](https://github.com/zombillano)
 
-- Lots of SSDT patches from [OC-little](https://translate.google.it/translate?sl=zh-CN&tl=en&u=https%3A%2F%2Fgithub.com%2Fdaliansky%2FOC-little)
+- Lots of SSDT patches from [benbender](https://github.com/benbender)
 
 - People at [r/hackintosh](https://www.reddit.com/r/hackintosh/) for their advices
 
