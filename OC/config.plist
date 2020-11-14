@@ -299,6 +299,7 @@
 	<dict>
 		<key>Add</key>
 		<array>
+			<!-- Essential kernel extensions -->
 			<dict>
 				<key>Arch</key>
 				<string>x86_64</string>
@@ -313,7 +314,7 @@
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
-				<string></string>
+				<string>17.0.0</string>
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
 			</dict>
@@ -327,7 +328,7 @@
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
-				<string></string>
+				<string>17.0.0</string>
 				<key>BundlePath</key>
 				<string>VirtualSMC.kext</string>
 				<key>ExecutablePath</key>
@@ -349,7 +350,7 @@
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
-				<string></string>
+				<string>17.0.0</string>
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
 			</dict>
@@ -363,7 +364,7 @@
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
-				<string></string>
+				<string>17.0.0</string>
 				<key>BundlePath</key>
 				<string>SMCBatteryManager.kext</string>
 				<key>ExecutablePath</key>
@@ -381,7 +382,7 @@
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
-				<string></string>
+				<string>17.0.0</string>
 				<key>BundlePath</key>
 				<string>SMCProcessor.kext</string>
 				<key>ExecutablePath</key>
@@ -399,7 +400,7 @@
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
-				<string></string>
+				<string>17.0.0</string>
 				<key>BundlePath</key>
 				<string>SMCSuperIO.kext</string>
 				<key>ExecutablePath</key>
@@ -417,25 +418,7 @@
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
-				<string></string>
-				<key>BundlePath</key>
-				<string>BrightnessKeys.kext</string>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/BrightnessKeys</string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>Comment</key>
-				<string></string>
-				<key>Enabled</key>
-				<true/>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
+				<string>17.0.0</string>
 				<key>BundlePath</key>
 				<string>YogaSMC.kext</string>
 				<key>ExecutablePath</key>
@@ -457,7 +440,7 @@
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
-				<string></string>
+				<string>17.0.0</string>
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
 			</dict>
@@ -471,7 +454,7 @@
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
-				<string></string>
+				<string>17.0.0</string>
 				<key>BundlePath</key>
 				<string>NVMeFix.kext</string>
 				<key>ExecutablePath</key>
@@ -489,7 +472,7 @@
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
-				<string></string>
+				<string>17.0.0</string>
 				<key>BundlePath</key>
 				<string>NoTouchID.kext</string>
 				<key>ExecutablePath</key>
@@ -497,6 +480,64 @@
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
 			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
+				<key>BundlePath</key>
+				<string>AppleBacklightSmoother.kext</string>
+				<key>Comment</key>
+				<string>Smooth backlight</string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/AppleBacklightSmoother</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string>17.0.0</string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<!-- / Essential kernel extensions -->
+			<!-- Hibernation -->
+			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
+				<key>BundlePath</key>
+				<string>HibernationFixup.kext</string>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/HibernationFixup</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string>17.0.0</string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
+				<key>BundlePath</key>
+				<string>RTCMemoryFixup.kext</string>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/RTCMemoryFixup</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string>17.0.0</string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<!-- / Hibernation -->
+			<!-- Bluetooth -->
 			<dict>
 				<key>Arch</key>
 				<string>x86_64</string>
@@ -509,7 +550,7 @@
 				<key>Enabled</key>
 				<true/>
 				<key>MinKernel</key>
-				<string></string>
+				<string>17.0.0</string>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/IntelBluetoothFirmware</string>
 				<key>BundlePath</key>
@@ -527,11 +568,31 @@
 				<key>Enabled</key>
 				<true/>
 				<key>MinKernel</key>
-				<string></string>
+				<string>17.0.0</string>
 				<key>ExecutablePath</key>
 				<string></string>
 				<key>BundlePath</key>
 				<string>IntelBluetoothInjector.kext</string>
+			</dict>
+			<!-- / Bluetooth -->
+			<!-- Networking -->
+			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
+				<key>Comment</key>
+				<string></string>
+				<key>MaxKernel</key>
+				<string>20.99.99</string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+				<key>Enabled</key>
+				<true/>
+				<key>MinKernel</key>
+				<string>20.0.0</string>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/AirportItlwm</string>
+				<key>BundlePath</key>
+				<string>AirportItlwmBigSur.kext</string>
 			</dict>
 			<dict>
 				<key>Arch</key>
@@ -539,36 +600,18 @@
 				<key>Comment</key>
 				<string></string>
 				<key>MaxKernel</key>
-				<string></string>
+				<string>19.99.99</string>
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
 				<key>Enabled</key>
 				<true/>
 				<key>MinKernel</key>
-				<string></string>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/itlwm</string>
-				<key>BundlePath</key>
-				<string>itlwm.kext</string>
-			</dict>
-			<!-- <dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>Comment</key>
-				<string></string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-				<key>Enabled</key>
-				<true/>
-				<key>MinKernel</key>
-				<string></string>
+				<string>19.0.0</string>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/AirportItlwm</string>
 				<key>BundlePath</key>
-				<string>AirportItlwm.kext</string>
-			</dict> -->
+				<string>AirportItlwmCatalina.kext</string>
+			</dict>
 			<dict>
 				<key>Arch</key>
 				<string>x86_64</string>
@@ -587,6 +630,8 @@
 				<key>BundlePath</key>
 				<string>IntelMausi.kext</string>
 			</dict>
+			<!-- / Networking -->
+			<!-- Power management -->
 			<dict>
 				<key>Arch</key>
 				<string>x86_64</string>
@@ -599,7 +644,7 @@
 				<key>Enabled</key>
 				<true/>
 				<key>MinKernel</key>
-				<string></string>
+				<string>17.0.0</string>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/CPUFriend</string>
 				<key>BundlePath</key>
@@ -617,7 +662,7 @@
 				<key>Enabled</key>
 				<true/>
 				<key>MinKernel</key>
-				<string></string>
+				<string>17.0.0</string>
 				<key>ExecutablePath</key>
 				<string></string>
 				<key>BundlePath</key>
@@ -635,11 +680,31 @@
 				<key>Enabled</key>
 				<true/>
 				<key>MinKernel</key>
-				<string></string>
+				<string>17.0.0</string>
 				<key>ExecutablePath</key>
 				<string></string>
 				<key>BundlePath</key>
 				<string>USBPorts.kext</string>
+			</dict>
+			<!-- / Power management -->
+			<!-- Keyboard and TrackPad/TrackPoint -->
+			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<true/>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string>17.0.0</string>
+				<key>BundlePath</key>
+				<string>BrightnessKeys.kext</string>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/BrightnessKeys</string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
 			</dict>
 			<dict>
 				<key>Arch</key>
@@ -651,7 +716,7 @@
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
-				<string></string>
+				<string>17.0.0</string>
 				<key>BundlePath</key>
 				<string>VoodooPS2Controller.kext</string>
 				<key>ExecutablePath</key>
@@ -669,7 +734,7 @@
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
-				<string></string>
+				<string>17.0.0</string>
 				<key>BundlePath</key>
 				<string>VoodooPS2Controller.kext/Contents/PlugIns/VoodooPS2Keyboard.kext</string>
 				<key>ExecutablePath</key>
@@ -689,7 +754,7 @@
 				<key>Enabled</key>
 				<true/>
 				<key>MinKernel</key>
-				<string></string>
+				<string>17.0.0</string>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/VoodooSMBus</string>
 				<key>BundlePath</key>
@@ -707,7 +772,7 @@
 				<key>Enabled</key>
 				<true/>
 				<key>MinKernel</key>
-				<string></string>
+				<string>17.0.0</string>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/VoodooRMI</string>
 				<key>BundlePath</key>
@@ -725,7 +790,7 @@
 				<key>Enabled</key>
 				<true/>
 				<key>MinKernel</key>
-				<string></string>
+				<string>17.0.0</string>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/RMISMBus</string>
 				<key>BundlePath</key>
@@ -743,7 +808,7 @@
 				<key>Enabled</key>
 				<true/>
 				<key>MinKernel</key>
-				<string></string>
+				<string>17.0.0</string>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/VoodooInput</string>
 				<key>BundlePath</key>
@@ -761,12 +826,14 @@
 				<key>Enabled</key>
 				<true/>
 				<key>MinKernel</key>
-				<string></string>
+				<string>17.0.0</string>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/VoodooTrackpoint</string>
 				<key>BundlePath</key>
 				<string>VoodooRMI.kext/Contents/PlugIns/VoodooTrackpoint.kext</string>
 			</dict>
+			<!-- / Keyboard and TrackPad/TrackPoint -->
+			<!-- Gadgets -->
 			<dict>
 				<key>Arch</key>
 				<string>x86_64</string>
@@ -777,7 +844,7 @@
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
-				<string></string>
+				<string>19.0.0</string>
 				<key>BundlePath</key>
 				<string>HoRNDIS.kext</string>
 				<key>ExecutablePath</key>
@@ -797,66 +864,13 @@
 				<key>Enabled</key>
 				<false/>
 				<key>MinKernel</key>
-				<string></string>
+				<string>17.0.0</string>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/VoltageShift</string>
 				<key>BundlePath</key>
 				<string>VoltageShift.kext</string>
 			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>BundlePath</key>
-				<string>HibernationFixup.kext</string>
-				<key>Comment</key>
-				<string></string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/HibernationFixup</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>BundlePath</key>
-				<string>RTCMemoryFixup.kext</string>
-				<key>Comment</key>
-				<string></string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/RTCMemoryFixup</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>BundlePath</key>
-				<string>AppleBacklightSmoother.kext</string>
-				<key>Comment</key>
-				<string>Smooth backlight</string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/AppleBacklightSmoother</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
+			<!-- / Gadgets -->
 		</array>
 		<key>Block</key>
 		<array/>
@@ -1151,13 +1165,13 @@
 			<dict>
 				<key>boot-args</key>
 				<string>rtcfx_exclude=80-AB</string>
+				<!-- Debug -->
+				<!-- <string>rtcfx_exclude=80-AB keepsyms=1 debug=0x100 -v</string> -->
 				<key>csr-active-config</key>
 				<data>AAAAAA==</data>
 				<key>prev-lang:kbd</key>
-				<!-- US layout -->
-				<data>ZW4tVVM6MA==</data>
-				<!-- Czech layout
-				<data>Y3MtQ1o6MzA3NzY=</data> -->
+				<string>en-US:0</string>
+				<!-- <string>cs-CZ:30776</string> -->
 				<key>SystemAudioVolume</key>
 				<data>Rg==</data>
 				<key>run-efi-updater</key>
