@@ -1,11 +1,10 @@
-/*
- * XCPM power management compatibility table.
- */
-DefinitionBlock ("", "SSDT", 2, "T480", "PLUG", 0x00003000)
-{
-    External (_PR.PR00, ProcessorObj)
 
-    Scope (_PR.PR00)
+//
+// Commenly used utils
+//
+DefinitionBlock ("", "SSDT", 2, "T480", "UTILS", 0x00001000)
+{
+    Scope (\)
     {
         Method (DTGP, 5, NotSerialized)
         {
@@ -16,9 +15,10 @@ DefinitionBlock ("", "SSDT", 2, "T480", "PLUG", 0x00003000)
                     If ((Arg2 == Zero))
                     {
                         Arg4 = Buffer (One)
-                            {
-                                 0x03 
-                            }
+                        {
+                            0x03
+                        }
+
                         Return (One)
                     }
 
@@ -30,21 +30,28 @@ DefinitionBlock ("", "SSDT", 2, "T480", "PLUG", 0x00003000)
             }
 
             Arg4 = Buffer (One)
-                {
-                     0x00 
-                }
+            {
+                0x00
+            }
+
             Return (Zero)
         }
 
-        Method (_DSM, 4, NotSerialized)
+        /**
+         * Detect OSX to enable other patches
+         */
+        Method (OSDW, 0, NotSerialized)
         {
-            Local0 = Package (0x02)
+            If (CondRefOf (\_OSI))
+            {
+                If (_OSI ("Darwin"))
                 {
-                    "plugin-type", 
-                    One
+                    Return (One) // Is OSX
                 }
-            DTGP (Arg0, Arg1, Arg2, Arg3, RefOf (Local0))
-            Return (Local0)
+            }
+
+            Return (Zero)
         }
     }
 }
+//EOF

@@ -34,47 +34,15 @@
 			<!-- /Optional -->
 			<dict>
 				<key>Comment</key>
-				<string>EC</string>
+				<string>SSDT-AC/string>
 				<key>Path</key>
-				<string>SSDT-EC.aml</string>
+				<string>SSDT-AC.aml</string>
 				<key>Enabled</key>
 				<true/>
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Disable DPTF,HPET and enable DYTC</string>
-				<key>Path</key>
-				<string>SSDT-INIT.aml</string>
-				<key>Enabled</key>
-				<true/>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Adding various virtual devices for macOS compatibility</string>
-				<key>Path</key>
-				<string>SSDT-VDEV.aml</string>
-				<key>Enabled</key>
-				<true/>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>SSDT for YogaSMC support</string>
-				<key>Path</key>
-				<string>SSDT-YOGASMC.aml</string>
-				<key>Enabled</key>
-				<true/>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Fix HWAC</string>
-				<key>Path</key>
-				<string>SSDT-HWAC.aml</string>
-				<key>Enabled</key>
-				<true/>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>SSDT for native battery support</string>
+				<string>SSDT-BATX</string>
 				<key>Path</key>
 				<string>SSDT-BATX.aml</string>
 				<key>Enabled</key>
@@ -82,15 +50,39 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>PMC support for macOS</string>
+				<string>SSDT-DEVICE</string>
 				<key>Path</key>
-				<string>SSDT-PMCR.aml</string>
+				<string>SSDT-DEVICE.aml</string>
 				<key>Enabled</key>
 				<true/>
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>SSDT for T480 Keyboard Map</string>
+				<string>SSDT-EC</string>
+				<key>Path</key>
+				<string>SSDT-EC.aml</string>
+				<key>Enabled</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>SSDT-HWAC</string>
+				<key>Path</key>
+				<string>SSDT-HWAC.aml</string>
+				<key>Enabled</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>SSDT-INIT</string>
+				<key>Path</key>
+				<string>SSDT-INIT.aml</string>
+				<key>Enabled</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>SSDT-KBRD</string>
 				<key>Path</key>
 				<string>SSDT-KBRD.aml</string>
 				<key>Enabled</key>
@@ -98,25 +90,49 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>XCPM power management compatibility table.</string>
+				<string>SSDT-PM</string>
 				<key>Path</key>
-				<string>SSDT-PLUG.aml</string>
+				<string>SSDT-PM.aml</string>
 				<key>Enabled</key>
 				<true/>
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Adding PNLF device for AppleBacklightSmoother.kext</string>
+				<string>SSDT-PNLF</string>
 				<key>Path</key>
-				<string>SSDT-PNLFS.aml</string>
+				<string>SSDT-PNLF.aml</string>
 				<key>Enabled</key>
 				<true/>
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>SSDT for native support</string>
+				<string>SSDT-SLEEP</string>
 				<key>Path</key>
 				<string>SSDT-SLEEP.aml</string>
+				<key>Enabled</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>SSDT-UTILS</string>
+				<key>Path</key>
+				<string>SSDT-UTILS.aml</string>
+				<key>Enabled</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>SSDT-XHC</string>
+				<key>Path</key>
+				<string>SSDT-XHC.aml</string>
+				<key>Enabled</key>
+				<true/>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>SSDT-YOGASMC</string>
+				<key>Path</key>
+				<string>SSDT-YOGASMC.aml</string>
 				<key>Enabled</key>
 				<true/>
 			</dict>
@@ -194,6 +210,58 @@
 				<data></data>
 				<key>Replace</key>
 				<data>WldBSwk=</data>
+				<key>ReplaceMask</key>
+				<data></data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+				<key>TableSignature</key>
+				<data>RFNEVA==</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>BATX: Nofify(BAT0, xx) to BATX</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<true/>
+				<key>Find</key>
+				<data>hkJBVDA=</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Mask</key>
+				<data></data>
+				<key>OemTableId</key>
+				<data></data>
+				<key>Replace</key>
+				<data>hkJBVFg=</data>
+				<key>ReplaceMask</key>
+				<data></data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+				<key>TableSignature</key>
+				<data>RFNEVA==</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>BATX: Nofify(BAT1, xx) to BATX</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<true/>
+				<key>Find</key>
+				<data>hkJBVDE=</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Mask</key>
+				<data></data>
+				<key>OemTableId</key>
+				<data></data>
+				<key>Replace</key>
+				<data>hkJBVFg=</data>
 				<key>ReplaceMask</key>
 				<data></data>
 				<key>Skip</key>
@@ -667,24 +735,6 @@
 				<string></string>
 				<key>BundlePath</key>
 				<string>CPUFriendDataProvider.kext</string>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>Comment</key>
-				<string></string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-				<key>Enabled</key>
-				<true/>
-				<key>MinKernel</key>
-				<string>17.0.0</string>
-				<key>ExecutablePath</key>
-				<string></string>
-				<key>BundlePath</key>
-				<string>USBPorts.kext</string>
 			</dict>
 			<!-- / Power management -->
 			<!-- Keyboard and TrackPad/TrackPoint -->

@@ -239,19 +239,6 @@ You can check your screen in gradient test [here](https://www.eizo.be/monitor-te
 
 <details>  
 
-<summary><strong>USB ports map</strong></summary>
-<br>
-
-If you are using different model and alternative kext from Other folder does not work for you. Try:
-
-- [USBMap](https://github.com/corpnewt/USBMap)
-
-- [Hackintool](https://github.com/headkaze/Hackintool)
-
-</details>  
-
-<details>  
-
 <summary><strong>CPUFriend power management</strong></summary>
 <br>
 

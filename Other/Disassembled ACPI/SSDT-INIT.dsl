@@ -44,21 +44,39 @@
 
 DefinitionBlock ("", "SSDT", 2, "T480", "INIT", 0x00001000)
 {
+    // External method from SSDT-UTILS.dsl
+    External (OSDW, MethodObj) // 0 Arguments
+
+    External (_SB.PCI0, DeviceObj)
+
+    // System
     External (HPTE, FieldUnitObj) // HPET enabled?
     External (WNTF, FieldUnitObj) // DYTC enabled?
     External (DPTF, FieldUnitObj) // DPTF enabled?
+    External (OSYS, FieldUnitObj) // OS type
+    External (ZINI, MethodObj)
 
-    If (_OSI ("Darwin"))
+    // Thunderbolt
+    External (_SB.PCI0.RP09.INIT, MethodObj)
+    
+    Method (OINI, 0, NotSerialized)
     {
-        Debug = "Set Variables..."
 
-        // disable HPET. It shouldn't be needed on modern systems anyway and is also disabled in genuine OSX
-        HPTE = Zero
+        If (_OSI ("Darwin"))
+        {
+            Debug = "Set Variables..."
 
-        // Enables DYTC, Lenovos thermal solution. Can be controlled by YogaSMC
-        // WNTF = One
+            // disable HPET. It shouldn't be needed on modern systems anyway and is also disabled in genuine OSX
+            HPTE = Zero
+        
+            // Patch OSYS to native value of darwin
+            OSYS = 0x07DF
 
-        // Disable DPTF, we use DYTC!
-        // DPTF = Zero
+            // Enables DYTC, Lenovos thermal solution. Can be controlled by YogaSMC
+            // WNTF = One
+
+            // Disable DPTF, we use DYTC!
+            // DPTF = Zero
+        }
     }
 }
