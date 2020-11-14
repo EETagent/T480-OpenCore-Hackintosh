@@ -11,7 +11,7 @@
 				<key>Comment</key>
 				<string>Disable Broadcom card during sleep</string>
 				<key>Path</key>
-				<string>SSDT-ARPT</string>
+				<string>SSDT-ARPT.aml</string>
 				<key>Enabled</key>
 				<false/>
 			</dict>
@@ -34,7 +34,7 @@
 			<!-- /Optional -->
 			<dict>
 				<key>Comment</key>
-				<string>SSDT-AC/string>
+				<string>SSDT-AC</string>
 				<key>Path</key>
 				<string>SSDT-AC.aml</string>
 				<key>Enabled</key>
