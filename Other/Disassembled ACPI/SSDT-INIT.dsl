@@ -56,9 +56,9 @@ DefinitionBlock ("", "SSDT", 2, "T480", "INIT", 0x00001000)
         HPTE = Zero
 
         // Enables DYTC, Lenovos thermal solution. Can be controlled by YogaSMC
-        WNTF = One
+        // WNTF = One
 
         // Disable DPTF, we use DYTC!
-        DPTF = Zero
+        // DPTF = Zero
     }
 }
