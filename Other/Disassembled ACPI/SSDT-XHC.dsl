@@ -13,7 +13,7 @@
 //
 // Reference: https://www.intel.com/content/dam/www/public/us/en/documents/technical-specifications/extensible-host-controler-interface-usb-xhci.pdf
 //
-DefinitionBlock ("", "SSDT", 2, "T480", "_XHC", 0x00001000)
+DefinitionBlock ("", "SSDT", 2, "T480", "XHC", 0x00001000)
 {
     External (_SB_.PCI0, DeviceObj)
     External (_SB_.PCI0.XHC_, DeviceObj)
