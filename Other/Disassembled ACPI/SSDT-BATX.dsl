@@ -1,6 +1,6 @@
 //
 // SSDT-BATX
-// Revision 8
+// Revision 9
 //
 // Copyleft (c) 2020 by bb. No rights reserved.
 //
@@ -60,7 +60,7 @@
 // 	<key>TableSignature</key>
 // 	<data>RFNEVA==</data>
 // </dict>
-//
+
 // <dict>
 // 	<key>Comment</key>
 // 	<string>BATX: Nofify(BAT1, xx) to BATX</string>
@@ -150,6 +150,7 @@
 //
 // Changelog:
 //
+// Revision 9 - Fix serials for batteries with broken values
 // Revision 8 - Fix battery-state handling, small corrections
 // Revision 7 - Smaller fixes, adds Notify-patches as EC won't update without them in edge-cases, replaces fake serials with battery-serial
 // Revision 6 - fixes, make the whole system more configureable, adds technical backround-documentation
@@ -160,7 +161,7 @@
 // Revision 1 - Raised timeout for mutexes, factored bank-switching out, added sleep to bank-switching, moved HWAC to its own SSDT
 // 
 //
-DefinitionBlock ("", "SSDT", 2, "T480", "BATX", 0x00008000)
+DefinitionBlock ("", "SSDT", 2, "T480", "BATX", 0x00009000)
 {
     // Please ensure that your LPC bus-device is available at \_SB.PCI0.LPCB (check your DSDT). 
     // Some older Thinkpads provide the LPC on \_SB.PCI0.LPC and if thats the case for you,
@@ -178,7 +179,6 @@ DefinitionBlock ("", "SSDT", 2, "T480", "BATX", 0x00008000)
 
     External (_SB.PCI0.LPCB.EC.BAT1._STA, MethodObj)
     External (_SB.PCI0.LPCB.EC.BAT1._HID, IntObj)
-
 
     Scope (\_SB.PCI0.LPCB.EC)
     {
@@ -573,7 +573,7 @@ DefinitionBlock ("", "SSDT", 2, "T480", "BATX", 0x00008000)
              */
             Method (SBSN, 0, NotSerialized)
             {
-                Return (B1B2 (SN00, SN01))
+                Return (ToDecimalString (B1B2 (SN00, SN01)))
             }
 
             /**
@@ -786,7 +786,7 @@ DefinitionBlock ("", "SSDT", 2, "T480", "BATX", 0x00008000)
                     // If battery available
                     If (Local5)
                     {
-                        // If battery ok
+                        // If battery not ok, wait
                         If (((Local4 & 0x07) == 0x07))
                         {
                             // decrease timer and wait for battery to be ready
@@ -795,7 +795,7 @@ DefinitionBlock ("", "SSDT", 2, "T480", "BATX", 0x00008000)
                         }
                         Else
                         {
-                            // Battery error
+                            // Battery ok
                             Local7 = One
                         }
                     }
@@ -886,7 +886,7 @@ DefinitionBlock ("", "SSDT", 2, "T480", "BATX", 0x00008000)
                 Arg1 [0x05] = SBDV /* \_SB_.PCI0.LPCB.EC__.BATX.SBDV */
 
                 // Serial Number
-                Arg1 [0x11] = ToString (SBSN) /* \_SB_.PCI0.LPCB.EC__.BATX.SBSN */
+                Arg1 [0x11] = SBSN /* \_SB_.PCI0.LPCB.EC__.BATX.SBSN */
 
 
                 //
@@ -1503,12 +1503,14 @@ DefinitionBlock ("", "SSDT", 2, "T480", "BATX", 0x00008000)
                     // 0x01: ManufactureDate (0x1), AppleSmartBattery format
                     PBIS [0x01] = SBDT
 
+                    Local6 = ToString (SBSN) /* \_SB_.PCI0.LPCB.EC__.BATX.SBSN */
+
                     // Serial Number
-                    PBIS [0x02] = SBSN /* \_SB_.PCI0.LPCB.EC__.BATX.SBSN */
-                    PBIS [0x03] = SBSN /* \_SB_.PCI0.LPCB.EC__.BATX.SBSN */
-                    PBIS [0x04] = SBSN /* \_SB_.PCI0.LPCB.EC__.BATX.SBSN */
-                    PBIS [0x05] = SBSN /* \_SB_.PCI0.LPCB.EC__.BATX.SBSN */
-                    PBIS [0x06] = SBSN /* \_SB_.PCI0.LPCB.EC__.BATX.SBSN */
+                    PBIS [0x02] = Local6
+                    PBIS [0x03] = Local6
+                    PBIS [0x04] = Local6
+                    PBIS [0x05] = Local6
+                    PBIS [0x06] = Local6
 
                     Release (BAXM)
 
