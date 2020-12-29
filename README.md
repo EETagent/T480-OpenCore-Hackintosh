@@ -85,8 +85,8 @@ If you find this bootloader configuration useful, consider giving it a star to m
 | RTCMemoryFixup         | 1.0.8          |
 | VirtualSMC             | 1.2.0          |
 | VoltageShift           | Disabled, 1.22 |
-| VoodooPS2Controller    | 2.1.8          |
-| VoodooRMI              | 1.2.0          |
+| VoodooPS2Controller    | 2.2.0          |
+| VoodooRMI              | 1.3.0          |
 | VoodooSMBus            | 3.0.0          |
 | WhateverGreen          | 1.4.6          |
 | YogaSMC                | 1.4.1          |
