@@ -1,7 +1,9 @@
 #!/bin/bash
 
-LINK="https://github.com/dortania/build-repo/releases/download/OpenCorePkg-e8cc05f/OpenCore-0.6.4-RELEASE.zip"
-VERSION="0.6.4"
+LINK=$1
+# https://github.com/dortania/build-repo/releases/download/OpenCorePkg-e8cc05f/OpenCore-0.6.4-RELEASE.zip
+VERSION=$2
+# 0.6.4
 
 mkdir Signed
 mkdir Signed/Drivers
@@ -15,6 +17,7 @@ wget $LINK
 unzip "OpenCore-${VERSION}-RELEASE.zip" "X64/*" -d "./Downloaded"
 unzip "OpenCore-${VERSION}-RELEASE.zip" "Docs/*" -d "./Downloaded"
 rm "OpenCore-${VERSION}-RELEASE.zip"
+
 
 # Sign drivers
 sbsign --key ISK.key --cert ISK.pem --output ./Signed/BOOTx64.efi ./Downloaded/X64/EFI/BOOT/BOOTx64.efi

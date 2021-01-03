@@ -1143,6 +1143,9 @@
 			<string>NVRAM</string>
 			<key>PickerMode</key>
 			<string>External</string>
+			<key>PickerVariant</key>
+			<string>Modern</string>
+			<!-- <string>Default</string> -->
 			<key>HideAuxiliary</key>
 			<false/>
 			<key>PickerAttributes</key>
@@ -1365,6 +1368,8 @@
 			<true/>
 			<key>VolumeAmplifier</key>
 			<integer>143</integer>
+			<key>SetupDelay</key>
+			<integer>0</integer>
 		</dict>
 		<key>Input</key>
 		<dict>
