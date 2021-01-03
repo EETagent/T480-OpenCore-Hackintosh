@@ -49,9 +49,9 @@
 			<key>Configuration</key>
 			<dict>
 				<key>DisableWhileTrackpointTimeout </key>
-				<integer>2000</integer>
+				<integer>100</integer>
 				<key>DisableWhileTypingTimeout</key>
-				<integer>2000</integer>
+				<integer>100</integer>
 				<key>FingerMajorMinorDiffMax</key>
 				<integer>3</integer>
 				<key>ForceTouchEmulation</key>
