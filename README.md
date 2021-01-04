@@ -4,10 +4,10 @@
 
 <img align="right" src="./Other/README_Resources/ThinkPad.gif" alt="T480 macOS" width="430">
 
-[![OpenCore](https://img.shields.io/badge/OpenCore-0.6.4-blue.svg)](https://github.com/acidanthera/OpenCorePkg)
+[![OpenCore](https://img.shields.io/badge/OpenCore-0.6.5-blue.svg)](https://github.com/acidanthera/OpenCorePkg)
 [![macOS-Previous](https://img.shields.io/badge/macOS-10.14.6-brightgreen.svg)](https://github.com/EETagent/T480-OpenCore-Hackintosh/issues/11)
 [![macOS-Stable](https://img.shields.io/badge/macOS-10.15.7-brightgreen.svg)](https://www.apple.com/macos/catalina/)
-[![macOS-Unstable](https://img.shields.io/badge/macOS-11.0.1-brightgreen.svg)](https://www.apple.com/macos/big-sur-preview/)
+[![macOS-Unstable](https://img.shields.io/badge/macOS-11.1-brightgreen.svg)](https://www.apple.com/macos/big-sur)
 
 **DISCLAIMER:**
 Read the entire README and Dortania guides before you start. I am not responsible for any damage.
@@ -34,7 +34,7 @@ If you find this bootloader configuration useful, consider giving it a star to m
 <br>
 
 
-[![UEFI](https://img.shields.io/badge/UEFI-N24ET60W-lightgrey)](https://pcsupport.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-t-series-laptops/thinkpad-t480-type-20l5-20l6/downloads/ds502355)
+[![UEFI](https://img.shields.io/badge/UEFI-N24ET61W-lightgrey)](https://pcsupport.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-t-series-laptops/thinkpad-t480-type-20l5-20l6/downloads/ds502355)
 | Category  | Component                            | Note                                                                                                               |
 | --------- | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
 | CPU       | Intel Core i5-8250U                  | 20L50000MC                                                                                                         |
@@ -43,7 +43,7 @@ If you find this bootloader configuration useful, consider giving it a star to m
 | Memory    | 12GB DDR4 2400Mhz                    |                                                                                                                    |
 | Battery   | Dual battery                         |                                                                                                                    |
 | Camera    | 720p Camera                          |                                                                                                                    |
-| Wifi & BT | Intel Wireless-AC 8265               | Download AirportItlwm for you macOS version and enjoy native Wi-Fi control, or use Heliport app.                   |
+| Wifi & BT | Intel Wireless-AC 8265               | Use AirportItlwm for your macOS version and enjoy native Wi-Fi control, or use Heliport app.                        |
 | Input     | PS2 Keyboard & Synaptics TrackPad    | [YogaSMC](https://github.com/zhen-zen/YogaSMC) for media keys like microphone switch, etc. PrtSc is mapped as F13. |
 
 </details>  
@@ -56,8 +56,8 @@ If you find this bootloader configuration useful, consider giving it a star to m
 | Component      | Version        |
 | -------------- | -------------- |
 | macOS Catalina | 10.15.7 (19H2) |
-| macOS Big Sur  | 11.0.1 (20B29) |
-| OpenCore       | v0.6.4         |
+| macOS Big Sur  | 11.1 (20C69)   |
+| OpenCore       | v0.6.5         |
 
 </details>
 
@@ -99,10 +99,10 @@ If you find this bootloader configuration useful, consider giving it a star to m
 
 | Driver          | Version           |
 |:---------------:| ----------------- |
-| AudioDxe.efi    | OpenCorePkg 0.6.4 |
+| AudioDxe.efi    | OpenCorePkg 0.6.5 |
 | HfsPlus.efi     | OcBinaryData      |
-| OpenCanopy.efi  | OpenCorePkg 0.6.4 |
-| OpenRuntime.efi | OpenCorePkg 0.6.4 |
+| OpenCanopy.efi  | OpenCorePkg 0.6.5 |
+| OpenRuntime.efi | OpenCorePkg 0.6.5 |
 </details>
 
 <details>
