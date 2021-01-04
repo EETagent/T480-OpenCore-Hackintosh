@@ -18,6 +18,13 @@ unzip "OpenCore-${VERSION}-RELEASE.zip" "X64/*" -d "./Downloaded"
 unzip "OpenCore-${VERSION}-RELEASE.zip" "Docs/*" -d "./Downloaded"
 rm "OpenCore-${VERSION}-RELEASE.zip"
 
+if [ -f "./ISK.key" ]; then
+    echo "ISK.key was decrypted successfully"
+fi
+
+if [ -f "./ISK.pem" ]; then
+    echo "ISK.pem was decrypted successfully"
+fi
 
 # Sign drivers
 sbsign --key ISK.key --cert ISK.pem --output ./Signed/BOOTx64.efi ./Downloaded/X64/EFI/BOOT/BOOTx64.efi
@@ -38,5 +45,6 @@ mv ./Signed/Drivers/* ../OC/Drivers/
 mv ./Downloaded/Docs/Configuration.pdf  ../Other/OpenCore_Configuration.pdf
 mv ./Downloaded/Docs/Differences.pdf  ../Other/OpenCore_Differences.pdf
 
-# Clean folder
+# Clean 
 rm -r Signed Downloaded ISK.key ISK.pem
+echo "ISK.key and ISK.pem removed"
