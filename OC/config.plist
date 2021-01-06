@@ -316,8 +316,12 @@
 	<dict>
 		<key>MmioWhitelist</key>
 		<array/>
+		<key>Patch</key>
+		<array/>
 		<key>Quirks</key>
 		<dict>
+			<key>AllowRelocationBlock</key>
+			<false/>
 			<key>AvoidRuntimeDefrag</key>
 			<true/>
 			<key>DevirtualiseMmio</key>
@@ -1103,8 +1107,10 @@
 			<key>DisableIoMapper</key>
 			<true/>
 			<key>DisableLinkeditJettison</key>
-			<false/>
+			<true/>
 			<key>ExternalDiskIcons</key>
+			<false/>
+			<key>ForceSecureBootScheme</key>
 			<false/>
 			<key>IncreasePciBarSize</key>
 			<false/>
@@ -1121,6 +1127,8 @@
 			<key>XhciPortLimit</key>
 			<false/>
 			<key>DisableRtcChecksum</key>
+			<false/>
+			<key>ExtendBTFeatureFlags</key>
 			<false/>
 		</dict>
 		<key>Scheme</key>
@@ -1139,12 +1147,15 @@
 		<array/>
 		<key>Boot</key>
 		<dict>
+			<key>ConsoleAttributes</key>
+			<integer>0</integer>
 			<key>HibernateMode</key>
 			<string>NVRAM</string>
 			<key>PickerMode</key>
 			<string>External</string>
 			<key>PickerVariant</key>
 			<string>Modern</string>
+			<!-- To revert back to pre macOS 11 icon style, use: -->
 			<!-- <string>Default</string> -->
 			<key>HideAuxiliary</key>
 			<false/>
@@ -1177,6 +1188,8 @@
 			<false/>
 			<key>SysReport</key>
 			<false/>
+			<key>SerialInit</key>
+			<false/>
 		</dict>
 		<key>Entries</key>
 		<array>
@@ -1193,6 +1206,8 @@
 				<string>CustomOS</string>
 				<key>Path</key>
 				<string>PciRoot(0x0)/Pci(0x1,0x1)/Pci(0x0,0x0)/NVMe(0x1,11-22-33-44-55-66-77-88)/HD(1,GPT,00000000-0000-0000-0000-000000000000,0x800,0x64000)/\EFI\BOOT\BOOTX64.EFI</string>
+				<key>TextMode</key>
+				<false/>
 			</dict>
 		</array>
 		<key>Security</key>
@@ -1365,7 +1380,7 @@
 			<key>MinimumVolume</key>
 			<integer>50</integer>
 			<key>PlayChime</key>
-			<true/>
+			<string>Enabled</string>
 			<key>VolumeAmplifier</key>
 			<integer>143</integer>
 			<key>SetupDelay</key>
@@ -1407,6 +1422,8 @@
 			<key>ProvideConsoleGop</key>
 			<true/>
 			<key>DirectGopRendering</key>
+			<false/>
+			<key>ForceResolution</key>
 			<false/>
 			<key>ReconnectOnResChange</key>
 			<false/>
@@ -1464,8 +1481,6 @@
 			<false/>
 			<key>ReleaseUsbOwnership</key>
 			<false/>
-			<key>DeduplicateBootOrder</key>
-			<true/>
 			<key>RequestBootVarRouting</key>
 			<true/>
 			<key>UnblockFsConnect</key>
